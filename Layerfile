@@ -17,5 +17,5 @@ RUN apt-get update && \
 # copy files from the repository into this staging server
 COPY . .
 
-RUN cd deploy && cp .env.example .env && docker compose up
-EXPOSE WEBSITE http://localhost:80
+RUN cd docker_example &&  docker compose up -d
+EXPOSE WEBSITE http://localhost:7860
